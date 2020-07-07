@@ -1,0 +1,30 @@
+PODS:
+  - Charts (3.5.0):
+    - Charts/Core (= 3.5.0)
+  - Charts/Core (3.5.0)
+  - Koloda (5.0.1):
+    - pop (~> 1.0)
+  - pop (1.0.12)
+  - youtube-ios-player-helper (0.1.6)
+
+DEPENDENCIES:
+  - Charts
+  - Koloda
+  - youtube-ios-player-helper
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - Koloda
+    - pop
+    - youtube-ios-player-helper
+
+SPEC CHECKSUMS:
+  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
+
+PODFILE CHECKSUM: 407f851c36a77187533ff0d108dce7a440aee9d1
+
+COCOAPODS: 1.9.3
