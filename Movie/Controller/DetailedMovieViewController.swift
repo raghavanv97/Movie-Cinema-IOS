@@ -168,7 +168,7 @@ class DetailedMovieViewController: UIViewController {
             theatreMaskImageView!.image = #imageLiteral(resourceName: "Theatre_Screen_1")
             theatreMaskImageView!.frame = childVC.youtubePlayer.bounds
             
-            UIView.animate(withDuration: 2.0) {
+            UIView.animate(withDuration: 1.0) {
                 
                 
                 childVC.youtubePlayer.mask = self.theatreMaskImageView!
@@ -204,7 +204,7 @@ class DetailedMovieViewController: UIViewController {
             bottonContainerVC.view.alpha = 1.0
             bottonContainerVC.willMove(toParent: nil)
             
-            UIView.animate(withDuration: 2.0, animations: {
+            UIView.animate(withDuration: 1.0, animations: {
                 maskImage.frame = CGRect(x: 0.0, y: 140.0, width: maskImage.bounds.size.width, height: 5.0)
                 bottonContainerVC.view.alpha = 0.0
             }) { (bool) in

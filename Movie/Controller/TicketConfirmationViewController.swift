@@ -79,7 +79,7 @@ class TicketConfirmationViewController: UIViewController {
             self.view.superview?.layoutIfNeeded()
         }) { (b) in
             
-            UIView.animate(withDuration: 1.2, delay: 0, options: animation, animations: {
+            UIView.animate(withDuration: 1.0, delay: 0, options: animation, animations: {
                 self.containerHeightConstraint.constant = 350
                 self.view.superview?.layoutIfNeeded()
             }, completion: nil)
