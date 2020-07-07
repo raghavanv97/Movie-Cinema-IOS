@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,1406 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Movie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="uF8-Xn-3Lj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdH-h1-5cG" userLabel="Container View" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="40" y="129" width="334" height="648"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uF8-Xn-3Lj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8WX-6D-0xE"/>
+                            <constraint firstItem="uF8-Xn-3Lj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9D0-0h-fEY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UdH-h1-5cG" secondAttribute="bottom" constant="85" id="DwF-ae-Bya"/>
+                            <constraint firstAttribute="bottom" secondItem="uF8-Xn-3Lj" secondAttribute="bottom" id="Rt1-gY-qPs"/>
+                            <constraint firstItem="UdH-h1-5cG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="YAr-0i-s4m"/>
+                            <constraint firstItem="UdH-h1-5cG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="abc-t3-RrO"/>
+                            <constraint firstItem="uF8-Xn-3Lj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eTr-UA-3iS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UdH-h1-5cG" secondAttribute="trailing" constant="40" id="unI-yg-sri"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="swipeView" destination="UdH-h1-5cG" id="DQ9-bs-yue"/>
+                        <segue destination="zya-qO-Xfo" kind="presentation" identifier="ToMovieDetail" animates="NO" modalPresentationStyle="fullScreen" id="4Ei-pY-2qH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="99.776785714285708"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="vMd-Ma-PIb">
+            <objects>
+                <pageViewController storyboardIdentifier="pagerViewControllerID" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="ANJ-2G-eUX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZT-hV-QUh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2384" y="1004"/>
+        </scene>
+        <!--Ticket Confirmation View Controller-->
+        <scene sceneID="dUA-xV-Wg3">
+            <objects>
+                <viewController id="UV4-YX-RMP" customClass="TicketConfirmationViewController" customModule="Movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7us-aG-lXu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="LTh-Vu-8fQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Theatre_Screen_top_bar" translatesAutoresizingMaskIntoConstraints="NO" id="xan-CP-gxh">
+                                <rect key="frame" x="40" y="264" width="334" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="7F5-Gw-2Xy"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Je-2X-tJS">
+                                <rect key="frame" x="40" y="64" width="334" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vt-QF-hKR">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="BGG-Gs-dDj"/>
+                                            <constraint firstAttribute="height" constant="50" id="bic-Rg-W6R"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="arrow.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="UV4-YX-RMP" eventType="touchUpInside" id="TOE-K2-eq0"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blade Runner 2049" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0le-KG-tx9">
+                                        <rect key="frame" x="58" y="0.0" width="218" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9xd-ly-iCi">
+                                        <rect key="frame" x="284" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="2yI-w5-FJY"/>
+                                            <constraint firstAttribute="height" constant="50" id="yHE-Aj-VUc"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR TICKET:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hv-1l-jLb">
+                                <rect key="frame" x="16" y="186.5" width="382" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyH-Zt-Yd3" userLabel="Container View">
+                                <rect key="frame" x="65" y="269" width="284" height="350"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kRR-hc-Tmb">
+                                        <rect key="frame" x="8" y="0.0" width="268" height="342"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE 10.12.2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcH-Vc-xut">
+                                        <rect key="frame" x="20" y="82" width="244" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME 3:30 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tki-aA-TZV">
+                                        <rect key="frame" x="20" y="118.5" width="244" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEATS ROW D, SEAT 3, 4" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sy6-SK-0oj">
+                                        <rect key="frame" x="20" y="155" width="244" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blade Runner 2049" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoq-Gc-8Fn">
+                                        <rect key="frame" x="20" y="191.5" width="244" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.51764705879999995" green="0.54901960780000003" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL: $40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kho-io-EYO">
+                                        <rect key="frame" x="20" y="279.5" width="244" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="eoq-Gc-8Fn" firstAttribute="leading" secondItem="MyH-Zt-Yd3" secondAttribute="leading" constant="20" id="4tr-Vc-ONR"/>
+                                    <constraint firstItem="xcH-Vc-xut" firstAttribute="leading" secondItem="MyH-Zt-Yd3" secondAttribute="leading" constant="20" id="8SK-CR-RQE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tki-aA-TZV" secondAttribute="trailing" constant="20" id="Bgd-Ok-9ri"/>
+                                    <constraint firstItem="xcH-Vc-xut" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MyH-Zt-Yd3" secondAttribute="top" constant="40" id="GBB-8S-dfb"/>
+                                    <constraint firstItem="kho-io-EYO" firstAttribute="leading" secondItem="MyH-Zt-Yd3" secondAttribute="leading" constant="20" id="Gdb-Sw-1or"/>
+                                    <constraint firstAttribute="trailing" secondItem="kho-io-EYO" secondAttribute="trailing" constant="20" id="LZP-fT-IwG"/>
+                                    <constraint firstAttribute="height" constant="350" id="Ny3-0t-7pK"/>
+                                    <constraint firstItem="Sy6-SK-0oj" firstAttribute="leading" secondItem="MyH-Zt-Yd3" secondAttribute="leading" constant="20" id="Qy1-OE-epJ"/>
+                                    <constraint firstItem="Tki-aA-TZV" firstAttribute="leading" secondItem="MyH-Zt-Yd3" secondAttribute="leading" constant="20" id="Upc-qr-Fj8"/>
+                                    <constraint firstItem="kRR-hc-Tmb" firstAttribute="leading" secondItem="MyH-Zt-Yd3" secondAttribute="leadingMargin" id="WeX-MV-TvT"/>
+                                    <constraint firstItem="kRR-hc-Tmb" firstAttribute="top" secondItem="MyH-Zt-Yd3" secondAttribute="top" id="YMA-XU-Em1"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="kRR-hc-Tmb" secondAttribute="trailing" id="YWY-6v-zPX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sy6-SK-0oj" secondAttribute="trailing" constant="20" id="dAo-U0-P0h"/>
+                                    <constraint firstItem="eoq-Gc-8Fn" firstAttribute="top" secondItem="Sy6-SK-0oj" secondAttribute="bottom" constant="16" id="efB-sS-3Op"/>
+                                    <constraint firstAttribute="bottom" secondItem="kho-io-EYO" secondAttribute="bottom" constant="50" id="g83-Pa-jI5"/>
+                                    <constraint firstAttribute="trailing" secondItem="eoq-Gc-8Fn" secondAttribute="trailing" constant="20" id="hbm-uY-Miz"/>
+                                    <constraint firstItem="Sy6-SK-0oj" firstAttribute="top" secondItem="Tki-aA-TZV" secondAttribute="bottom" constant="16" id="hcA-NA-ozD"/>
+                                    <constraint firstAttribute="trailing" secondItem="xcH-Vc-xut" secondAttribute="trailing" constant="20" id="ocb-ZU-emu"/>
+                                    <constraint firstItem="kho-io-EYO" firstAttribute="top" secondItem="eoq-Gc-8Fn" secondAttribute="bottom" constant="16" id="rMv-na-BZv"/>
+                                    <constraint firstItem="Tki-aA-TZV" firstAttribute="top" secondItem="xcH-Vc-xut" secondAttribute="bottom" constant="16" id="uSU-pe-Opj"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="kRR-hc-Tmb" secondAttribute="bottom" id="xRD-zi-XfW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQq-OG-kqO" userLabel="TicketConfimationContainerView">
+                                <rect key="frame" x="65" y="620" width="284" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="KFN-ub-1NV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CxR-Wt-ShN" firstAttribute="trailing" secondItem="xan-CP-gxh" secondAttribute="trailing" constant="40" id="EL2-bF-2sP"/>
+                            <constraint firstItem="LTh-Vu-8fQ" firstAttribute="top" secondItem="7us-aG-lXu" secondAttribute="top" id="ER3-SM-Ho2"/>
+                            <constraint firstAttribute="trailing" secondItem="MyH-Zt-Yd3" secondAttribute="trailing" constant="65" id="GT5-qM-umy"/>
+                            <constraint firstItem="xan-CP-gxh" firstAttribute="top" secondItem="CxR-Wt-ShN" secondAttribute="top" constant="220" id="GgC-WE-h58"/>
+                            <constraint firstItem="CxR-Wt-ShN" firstAttribute="trailing" secondItem="lQq-OG-kqO" secondAttribute="trailing" constant="65" id="HYb-gd-Dan"/>
+                            <constraint firstItem="lQq-OG-kqO" firstAttribute="leading" secondItem="CxR-Wt-ShN" secondAttribute="leading" constant="65" id="MVv-zA-oeh"/>
+                            <constraint firstItem="LTh-Vu-8fQ" firstAttribute="trailing" secondItem="7us-aG-lXu" secondAttribute="trailing" id="QBR-WU-VWP"/>
+                            <constraint firstItem="MyH-Zt-Yd3" firstAttribute="leading" secondItem="CxR-Wt-ShN" secondAttribute="leading" constant="65" id="W7n-2a-Ky8"/>
+                            <constraint firstItem="CxR-Wt-ShN" firstAttribute="trailing" secondItem="9hv-1l-jLb" secondAttribute="trailing" constant="16" id="YIr-8V-Cgz"/>
+                            <constraint firstItem="xan-CP-gxh" firstAttribute="leading" secondItem="CxR-Wt-ShN" secondAttribute="leading" constant="40" id="bEk-5t-ayg"/>
+                            <constraint firstItem="1Je-2X-tJS" firstAttribute="top" secondItem="CxR-Wt-ShN" secondAttribute="top" constant="20" id="e9V-dY-Di6"/>
+                            <constraint firstItem="lQq-OG-kqO" firstAttribute="top" secondItem="MyH-Zt-Yd3" secondAttribute="bottom" constant="1" id="gMc-Dh-KT0"/>
+                            <constraint firstItem="1Je-2X-tJS" firstAttribute="leading" secondItem="CxR-Wt-ShN" secondAttribute="leading" constant="40" id="ixj-uY-SO5"/>
+                            <constraint firstItem="xan-CP-gxh" firstAttribute="top" secondItem="9hv-1l-jLb" secondAttribute="bottom" constant="50" id="pGw-cY-ShH"/>
+                            <constraint firstItem="LTh-Vu-8fQ" firstAttribute="bottom" secondItem="7us-aG-lXu" secondAttribute="bottom" id="qur-Gb-vDw"/>
+                            <constraint firstItem="CxR-Wt-ShN" firstAttribute="trailing" secondItem="1Je-2X-tJS" secondAttribute="trailing" constant="40" id="tBg-8B-sie"/>
+                            <constraint firstItem="LTh-Vu-8fQ" firstAttribute="leading" secondItem="7us-aG-lXu" secondAttribute="leading" id="vUL-a4-Kip"/>
+                            <constraint firstItem="9hv-1l-jLb" firstAttribute="leading" secondItem="CxR-Wt-ShN" secondAttribute="leading" constant="16" id="wgB-pF-ljU"/>
+                            <constraint firstItem="MyH-Zt-Yd3" firstAttribute="top" secondItem="xan-CP-gxh" secondAttribute="bottom" id="xnI-kg-nvS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CxR-Wt-ShN"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerHeightConstraint" destination="Ny3-0t-7pK" id="3Px-lx-4H2"/>
+                        <outlet property="movieDateText" destination="xcH-Vc-xut" id="9eg-2d-jHg"/>
+                        <outlet property="movieNameText" destination="0le-KG-tx9" id="26G-QG-uHb"/>
+                        <outlet property="movieNameTextLabel" destination="eoq-Gc-8Fn" id="BNe-ov-XHI"/>
+                        <outlet property="moviePosterImage" destination="kRR-hc-Tmb" id="J5L-mu-Vjs"/>
+                        <outlet property="movieSeatsText" destination="Sy6-SK-0oj" id="R2L-zs-aXb"/>
+                        <outlet property="movieTicketBookedDetailedContainer" destination="MyH-Zt-Yd3" id="mCD-yQ-ahi"/>
+                        <outlet property="movieTimingText" destination="Tki-aA-TZV" id="j0U-cR-3n4"/>
+                        <outlet property="swipeToConstraint" destination="KFN-ub-1NV" id="5dX-X6-mMQ"/>
+                        <outlet property="ticketConfirmationContainer" destination="lQq-OG-kqO" id="Z1i-lt-t9m"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="homePageSegue" animates="NO" modalPresentationStyle="fullScreen" id="afa-Rg-Y3w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VxS-YJ-Roq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1233.3333333333335" y="999.77678571428567"/>
+        </scene>
+        <!--Detailed Movie View Controller-->
+        <scene sceneID="Z23-2l-8q5">
+            <objects>
+                <viewController id="zya-qO-Xfo" customClass="DetailedMovieViewController" customModule="Movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y96-Xu-Axt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="zVg-Jh-6Eh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s0y-5g-95x">
+                                <rect key="frame" x="40" y="64" width="334" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M81-9s-Y0a">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="eWm-Eh-j05"/>
+                                            <constraint firstAttribute="height" constant="30" id="n16-Hf-j3W"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="arrow.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backButtonClicked:" destination="zya-qO-Xfo" eventType="touchUpInside" id="E3G-o5-cIq"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blade Runner 2049" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKm-3j-7Yf">
+                                        <rect key="frame" x="93" y="0.0" width="148" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3QP-yJ-QIo">
+                                        <rect key="frame" x="304" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="MCj-kp-4qV"/>
+                                            <constraint firstAttribute="width" constant="30" id="ljN-Le-prW"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="M81-9s-Y0a" firstAttribute="top" secondItem="s0y-5g-95x" secondAttribute="top" id="4aV-sY-gYY"/>
+                                    <constraint firstAttribute="trailing" secondItem="3QP-yJ-QIo" secondAttribute="trailing" id="6Rg-gC-PQl"/>
+                                    <constraint firstAttribute="bottom" secondItem="3QP-yJ-QIo" secondAttribute="bottom" id="F97-KW-EeF"/>
+                                    <constraint firstAttribute="bottom" secondItem="M81-9s-Y0a" secondAttribute="bottom" id="Pxk-gH-w2Y"/>
+                                    <constraint firstItem="M81-9s-Y0a" firstAttribute="leading" secondItem="s0y-5g-95x" secondAttribute="leading" id="RyR-So-ZT7"/>
+                                    <constraint firstAttribute="bottom" secondItem="TKm-3j-7Yf" secondAttribute="bottom" id="UZC-5T-sU8"/>
+                                    <constraint firstItem="TKm-3j-7Yf" firstAttribute="top" secondItem="s0y-5g-95x" secondAttribute="top" id="aTI-xy-mw3"/>
+                                    <constraint firstItem="3QP-yJ-QIo" firstAttribute="top" secondItem="s0y-5g-95x" secondAttribute="top" id="dv9-YF-IeM"/>
+                                </constraints>
+                            </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iKn-fk-Hy1" userLabel="Top Container View">
+                                <rect key="frame" x="40" y="124" width="334" height="286.5"/>
+                                <connections>
+                                    <segue destination="WaP-Qf-EXR" kind="embed" identifier="ToMoviePosterSegue" id="SIp-3s-3Jd"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzO-xO-drR" userLabel="Bottom Container View">
+                                <rect key="frame" x="40" y="437" width="334" height="409"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zVg-Jh-6Eh" firstAttribute="leading" secondItem="OVc-h2-3m6" secondAttribute="leading" id="26R-qT-abS"/>
+                            <constraint firstItem="OVc-h2-3m6" firstAttribute="trailing" secondItem="bzO-xO-drR" secondAttribute="trailing" constant="40" id="Cn3-u7-iAe"/>
+                            <constraint firstItem="iKn-fk-Hy1" firstAttribute="leading" secondItem="OVc-h2-3m6" secondAttribute="leading" constant="40" id="De6-T5-1Cx"/>
+                            <constraint firstItem="OVc-h2-3m6" firstAttribute="trailing" secondItem="s0y-5g-95x" secondAttribute="trailing" constant="40" id="E0Q-js-cfb"/>
+                            <constraint firstItem="iKn-fk-Hy1" firstAttribute="top" secondItem="OVc-h2-3m6" secondAttribute="top" constant="80" id="EM4-RI-XqA"/>
+                            <constraint firstItem="s0y-5g-95x" firstAttribute="top" secondItem="OVc-h2-3m6" secondAttribute="top" constant="20" id="HBp-O8-XSJ"/>
+                            <constraint firstItem="OVc-h2-3m6" firstAttribute="bottom" secondItem="bzO-xO-drR" secondAttribute="bottom" constant="16" id="Lrf-qT-zRX"/>
+                            <constraint firstAttribute="bottom" secondItem="zVg-Jh-6Eh" secondAttribute="bottom" id="Tfg-E2-c68"/>
+                            <constraint firstItem="bzO-xO-drR" firstAttribute="leading" secondItem="OVc-h2-3m6" secondAttribute="leading" constant="40" id="Vpz-09-OT3"/>
+                            <constraint firstItem="zVg-Jh-6Eh" firstAttribute="trailing" secondItem="OVc-h2-3m6" secondAttribute="trailing" id="WWp-Bi-jXs"/>
+                            <constraint firstItem="zVg-Jh-6Eh" firstAttribute="top" secondItem="Y96-Xu-Axt" secondAttribute="top" id="WZD-vM-OMS"/>
+                            <constraint firstItem="OVc-h2-3m6" firstAttribute="trailing" secondItem="iKn-fk-Hy1" secondAttribute="trailing" constant="40" id="mXd-lf-xJY"/>
+                            <constraint firstItem="s0y-5g-95x" firstAttribute="leading" secondItem="OVc-h2-3m6" secondAttribute="leading" constant="40" id="nbc-Sj-zV4"/>
+                            <constraint firstItem="bzO-xO-drR" firstAttribute="height" secondItem="OVc-h2-3m6" secondAttribute="height" multiplier="0.5" id="qdw-tF-xBS"/>
+                            <constraint firstItem="iKn-fk-Hy1" firstAttribute="height" secondItem="OVc-h2-3m6" secondAttribute="height" multiplier="0.35" id="u4j-se-qI8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OVc-h2-3m6"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomContainerView" destination="bzO-xO-drR" id="xAt-CQ-h21"/>
+                        <outlet property="movieNameText" destination="TKm-3j-7Yf" id="Kuc-HF-kEm"/>
+                        <outlet property="topContainerView" destination="iKn-fk-Hy1" id="C1M-nc-PVT"/>
+                        <segue destination="UV4-YX-RMP" kind="presentation" identifier="ticketConfirmationSegue" animates="NO" modalPresentationStyle="fullScreen" id="sGW-ht-iXg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kOD-NY-MKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="990"/>
+        </scene>
+        <!--Movie Poster View Controller-->
+        <scene sceneID="9Sq-I8-y5Z">
+            <objects>
+                <viewController id="WaP-Qf-EXR" customClass="MoviePosterViewController" customModule="Movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="COK-Ln-mKg">
+                        <rect key="frame" x="0.0" y="0.0" width="334" height="286.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UMs-eb-nRU">
+                                <rect key="frame" x="0.0" y="0.0" width="334" height="286.5"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWL-BZ-V95" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="44" width="334" height="242.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Bgr-u1-ixP" firstAttribute="bottom" secondItem="eWL-BZ-V95" secondAttribute="bottom" id="1Nc-cQ-Blc"/>
+                            <constraint firstItem="UMs-eb-nRU" firstAttribute="top" secondItem="COK-Ln-mKg" secondAttribute="top" id="5dj-8Q-38x"/>
+                            <constraint firstItem="UMs-eb-nRU" firstAttribute="leading" secondItem="COK-Ln-mKg" secondAttribute="leading" id="9SJ-Sw-VCL"/>
+                            <constraint firstItem="eWL-BZ-V95" firstAttribute="top" secondItem="Bgr-u1-ixP" secondAttribute="top" id="Bfx-bz-jzx"/>
+                            <constraint firstItem="Bgr-u1-ixP" firstAttribute="trailing" secondItem="eWL-BZ-V95" secondAttribute="trailing" id="Dh1-dj-nfl"/>
+                            <constraint firstAttribute="bottom" secondItem="UMs-eb-nRU" secondAttribute="bottom" id="X0t-7o-0PM"/>
+                            <constraint firstAttribute="trailing" secondItem="UMs-eb-nRU" secondAttribute="trailing" id="lXp-VU-kPq"/>
+                            <constraint firstItem="eWL-BZ-V95" firstAttribute="leading" secondItem="Bgr-u1-ixP" secondAttribute="leading" id="ybo-jf-CHW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bgr-u1-ixP"/>
+                    </view>
+                    <connections>
+                        <outlet property="imagePoster" destination="UMs-eb-nRU" id="gHj-Ms-1rA"/>
+                        <outlet property="youtubePlayer" destination="eWL-BZ-V95" id="W7P-uY-vYM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OZN-Xl-bcE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="839"/>
+        </scene>
+        <!--Movie Detail Sub Child View Controller-->
+        <scene sceneID="g83-kn-Oj7">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailSubChildVCID" id="fGr-Ut-TjN" customClass="MovieDetailSubChildViewController" customModule="Movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KVP-6l-aDV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0QD-O2-qhE" userLabel="ContainerView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BTb-Wu-zUp" userLabel="MovieShareAndTiming">
+                                        <rect key="frame" x="16" y="113.5" width="382" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dQ-6R-78K">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="30"/>
+                                                <color key="backgroundColor" red="0.25882352939999997" green="0.32156862749999998" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Bsf-7A-heA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="SESSION TIMES">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sessionTimingClicked:" destination="fGr-Ut-TjN" eventType="touchUpInside" id="Rz1-88-REG"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AB4-ce-st3">
+                                                <rect key="frame" x="363" y="4" width="19" height="21"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q69-TL-NsG">
+                                        <rect key="frame" x="16" y="159.5" width="382" height="81.5"/>
+                                        <string key="text">A young blade runner's discovery of a long buried secret leads him to track down former blade runner Rick Deckard, who's been missed for thirty years.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xpp-lr-s94" userLabel="MovieNameAndRating">
+                                        <rect key="frame" x="16" y="20" width="382" height="41"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blade Runner 2049" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnV-YP-jS8">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.25882352939999997" green="0.32156862749999998" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NZ7-Xl-b1i" userLabel="MovieRatings">
+                                                <rect key="frame" x="307" y="0.0" width="75" height="41"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHD-DS-Tde">
+                                                        <rect key="frame" x="26.5" y="0.0" width="22.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMDB: 8.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdH-FZ-TYh">
+                                                        <rect key="frame" x="0.0" y="20.5" width="75" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="NZ7-Xl-b1i" secondAttribute="bottom" id="4hJ-RD-dhj"/>
+                                            <constraint firstItem="xnV-YP-jS8" firstAttribute="leading" secondItem="xpp-lr-s94" secondAttribute="leading" id="8QE-le-81Q"/>
+                                            <constraint firstItem="NZ7-Xl-b1i" firstAttribute="top" secondItem="xpp-lr-s94" secondAttribute="top" id="Acl-Uz-KOd"/>
+                                            <constraint firstAttribute="bottom" secondItem="xnV-YP-jS8" secondAttribute="bottom" id="Zgl-og-BFD"/>
+                                            <constraint firstAttribute="trailing" secondItem="NZ7-Xl-b1i" secondAttribute="trailing" id="bv6-qd-MHd"/>
+                                            <constraint firstItem="xnV-YP-jS8" firstAttribute="top" secondItem="xpp-lr-s94" secondAttribute="top" id="gZr-IK-Wle"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mystory, Sci-Fi, Thriller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fS3-85-miB">
+                                        <rect key="frame" x="20" y="77" width="378" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fS3-85-miB" secondAttribute="trailing" constant="16" id="08s-EG-bL9"/>
+                                    <constraint firstItem="fS3-85-miB" firstAttribute="leading" secondItem="0QD-O2-qhE" secondAttribute="leading" constant="20" id="0CO-x3-rfH"/>
+                                    <constraint firstAttribute="trailing" secondItem="q69-TL-NsG" secondAttribute="trailing" constant="16" id="4If-WR-yAh"/>
+                                    <constraint firstAttribute="trailing" secondItem="BTb-Wu-zUp" secondAttribute="trailing" constant="16" id="9m9-os-zgY"/>
+                                    <constraint firstItem="BTb-Wu-zUp" firstAttribute="leading" secondItem="0QD-O2-qhE" secondAttribute="leading" constant="16" id="EjE-zx-WeO"/>
+                                    <constraint firstItem="xpp-lr-s94" firstAttribute="top" secondItem="0QD-O2-qhE" secondAttribute="top" constant="20" id="Hkc-2I-oMD"/>
+                                    <constraint firstItem="fS3-85-miB" firstAttribute="top" secondItem="xpp-lr-s94" secondAttribute="bottom" constant="16" id="L8c-pw-7lW"/>
+                                    <constraint firstItem="BTb-Wu-zUp" firstAttribute="top" secondItem="fS3-85-miB" secondAttribute="bottom" constant="16" id="aIL-Dz-50O"/>
+                                    <constraint firstAttribute="trailing" secondItem="xpp-lr-s94" secondAttribute="trailing" constant="16" id="beV-sa-hvy"/>
+                                    <constraint firstItem="q69-TL-NsG" firstAttribute="top" secondItem="BTb-Wu-zUp" secondAttribute="bottom" constant="16" id="fYZ-dy-hJ0"/>
+                                    <constraint firstItem="BTb-Wu-zUp" firstAttribute="top" secondItem="fS3-85-miB" secondAttribute="bottom" constant="16" id="gUB-N6-o50"/>
+                                    <constraint firstItem="fS3-85-miB" firstAttribute="top" secondItem="xpp-lr-s94" secondAttribute="bottom" constant="16" id="top-uR-jFJ"/>
+                                    <constraint firstItem="xpp-lr-s94" firstAttribute="leading" secondItem="0QD-O2-qhE" secondAttribute="leading" constant="16" id="urT-AY-dkh"/>
+                                    <constraint firstItem="q69-TL-NsG" firstAttribute="leading" secondItem="0QD-O2-qhE" secondAttribute="leading" constant="16" id="yWa-jP-Aug"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0QD-O2-qhE" firstAttribute="leading" secondItem="3Pq-xo-cAt" secondAttribute="leading" id="HiE-FW-6e9"/>
+                            <constraint firstItem="3Pq-xo-cAt" firstAttribute="bottom" secondItem="0QD-O2-qhE" secondAttribute="bottom" id="KRg-kj-mJj"/>
+                            <constraint firstItem="0QD-O2-qhE" firstAttribute="top" secondItem="KVP-6l-aDV" secondAttribute="top" id="h1V-xY-XRO"/>
+                            <constraint firstItem="0QD-O2-qhE" firstAttribute="trailing" secondItem="3Pq-xo-cAt" secondAttribute="trailing" id="oVe-Az-CeP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Pq-xo-cAt"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="0QD-O2-qhE" id="ivS-Lp-Bad"/>
+                        <outlet property="imdbText" destination="GdH-FZ-TYh" id="NwH-G9-le2"/>
+                        <outlet property="movieCategoryText" destination="fS3-85-miB" id="ZOy-GS-X8X"/>
+                        <outlet property="movieDescriptionText" destination="q69-TL-NsG" id="xgf-9W-x6g"/>
+                        <outlet property="movieNameText" destination="xnV-YP-jS8" id="BGN-53-NWC"/>
+                        <outlet property="sessionTimeButton" destination="5dQ-6R-78K" id="u5G-Wd-iMA"/>
+                        <outlet property="twoDor3D" destination="XHD-DS-Tde" id="iqb-A0-LWp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bZi-oU-ZcP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776.81159420289862" y="1827.4553571428571"/>
+        </scene>
+        <!--Movie Session Timing Child View Controller-->
+        <scene sceneID="uej-Ep-Buz">
+            <objects>
+                <viewController storyboardIdentifier="MovieSessionTimingVC" id="ptN-qv-YCn" customClass="MovieSessionTimingChildViewController" customModule="Movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sfl-k7-h6w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SESSION DATE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkj-af-ZKm">
+                                <rect key="frame" x="16" y="60" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnM-S7-7VF">
+                                <rect key="frame" x="16" y="96.5" width="46.5" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="0.25882352939999997" green="0.32156862749999998" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9Ft-wg-FSo" userLabel="DayAndMonthSV">
+                                <rect key="frame" x="78.5" y="96.5" width="91" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="thu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6u-Uv-dMQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="29.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OCTOBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uR2-Uw-To8">
+                                        <rect key="frame" x="0.0" y="24" width="91" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="31s-xX-sX2">
+                                <rect key="frame" x="318" y="104.5" width="80" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eD-Kf-cG6">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="A2c-Kp-4JW"/>
+                                            <constraint firstAttribute="width" constant="40" id="WsN-ww-1o2"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="chevron.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="previousDayButtonClicked:" destination="ptN-qv-YCn" eventType="touchUpInside" id="Wre-Ch-P4d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4d-Ij-fbI">
+                                        <rect key="frame" x="40" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="WoO-I4-sAP"/>
+                                            <constraint firstAttribute="height" constant="40" id="l8D-56-7P9"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="chevron.right" catalog="system"/>
+                                        <connections>
+                                            <action selector="nextDayButtonClicked:" destination="ptN-qv-YCn" eventType="touchUpInside" id="XSz-qZ-yjV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SESSION TIME:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMK-Xn-EJ6">
+                                <rect key="frame" x="16" y="182.5" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKV-P3-giW" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="211" width="382" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="3mN-gh-Ozh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvT-50-RJm">
+                                <rect key="frame" x="137" y="377" width="140" height="33"/>
+                                <color key="backgroundColor" red="0.51764705882352935" green="0.5490196078431373" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="23Q-Sd-teN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="BOOK SEATS">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="bookSeatsButtonClicked:" destination="ptN-qv-YCn" eventType="touchUpInside" id="O9p-zP-QNm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="31s-xX-sX2" firstAttribute="bottom" secondItem="9Ft-wg-FSo" secondAttribute="bottom" id="5z2-C7-6ek"/>
+                            <constraint firstItem="YEr-o7-c6N" firstAttribute="trailing" secondItem="tkj-af-ZKm" secondAttribute="trailing" constant="16" id="IWR-Nj-dDs"/>
+                            <constraint firstItem="hnM-S7-7VF" firstAttribute="top" secondItem="tkj-af-ZKm" secondAttribute="bottom" constant="16" id="MtK-3j-q2J"/>
+                            <constraint firstItem="YEr-o7-c6N" firstAttribute="trailing" secondItem="BKV-P3-giW" secondAttribute="trailing" constant="16" id="Wdq-1V-T0l"/>
+                            <constraint firstItem="9Ft-wg-FSo" firstAttribute="top" secondItem="tkj-af-ZKm" secondAttribute="bottom" constant="16" id="WuV-Op-T20"/>
+                            <constraint firstItem="lvT-50-RJm" firstAttribute="top" secondItem="BKV-P3-giW" secondAttribute="bottom" constant="16" id="XDR-4N-EvW"/>
+                            <constraint firstItem="sMK-Xn-EJ6" firstAttribute="top" secondItem="hnM-S7-7VF" secondAttribute="bottom" constant="32" id="YQj-H9-QwU"/>
+                            <constraint firstItem="YEr-o7-c6N" firstAttribute="trailing" secondItem="31s-xX-sX2" secondAttribute="trailing" constant="16" id="Yub-wz-BWa"/>
+                            <constraint firstItem="tkj-af-ZKm" firstAttribute="leading" secondItem="YEr-o7-c6N" secondAttribute="leading" constant="16" id="cpK-3k-YhW"/>
+                            <constraint firstItem="9Ft-wg-FSo" firstAttribute="leading" secondItem="hnM-S7-7VF" secondAttribute="trailing" constant="16" id="eA7-0h-Nji"/>
+                            <constraint firstItem="lvT-50-RJm" firstAttribute="centerX" secondItem="sfl-k7-h6w" secondAttribute="centerX" id="gUb-41-fPv"/>
+                            <constraint firstItem="9Ft-wg-FSo" firstAttribute="leading" secondItem="hnM-S7-7VF" secondAttribute="trailing" constant="16" id="iW3-No-j97"/>
+                            <constraint firstItem="YEr-o7-c6N" firstAttribute="trailing" secondItem="sMK-Xn-EJ6" secondAttribute="trailing" constant="16" id="l5b-OA-jhD"/>
+                            <constraint firstItem="sMK-Xn-EJ6" firstAttribute="leading" secondItem="YEr-o7-c6N" secondAttribute="leading" constant="16" id="lld-1q-Flz"/>
+                            <constraint firstItem="BKV-P3-giW" firstAttribute="leading" secondItem="YEr-o7-c6N" secondAttribute="leading" constant="16" id="mGX-RV-D5o"/>
+                            <constraint firstItem="BKV-P3-giW" firstAttribute="top" secondItem="sMK-Xn-EJ6" secondAttribute="bottom" constant="8" id="oss-FM-Ug7"/>
+                            <constraint firstItem="hnM-S7-7VF" firstAttribute="leading" secondItem="YEr-o7-c6N" secondAttribute="leading" constant="16" id="s1f-tS-WZ6"/>
+                            <constraint firstItem="tkj-af-ZKm" firstAttribute="top" secondItem="YEr-o7-c6N" secondAttribute="top" constant="16" id="zfE-dG-hlC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YEr-o7-c6N"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="barChartView" destination="BKV-P3-giW" id="898-s5-5eB"/>
+                        <outlet property="bookSeatsButton" destination="lvT-50-RJm" id="8VJ-gB-fn5"/>
+                        <outlet property="movieDateText" destination="hnM-S7-7VF" id="rRP-0a-LO4"/>
+                        <outlet property="movieDayText" destination="g6u-Uv-dMQ" id="aUd-3R-sFJ"/>
+                        <outlet property="movieMonthText" destination="uR2-Uw-To8" id="QO2-yd-olh"/>
+                        <outlet property="nextButton" destination="K4d-Ij-fbI" id="QLq-fs-vOE"/>
+                        <outlet property="previousButton" destination="0eD-Kf-cG6" id="UnJ-qo-rdr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m5F-2T-ZBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613.0434782608697" y="1274.6651785714284"/>
+        </scene>
+        <!--Ticket Booking View Controller-->
+        <scene sceneID="oVX-nc-UYd">
+            <objects>
+                <viewController storyboardIdentifier="TicketBookingSID" id="HCi-C0-WYq" customClass="TicketBookingViewController" customModule="Movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="etE-3e-RdM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yjw-gr-TZD" userLabel="ContainerView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="364"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kHu-1t-YYC">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="356"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="vry-Yb-NwU" userLabel="ColumnSV">
+                                                <rect key="frame" x="65" y="0.0" width="284" height="37.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7g-vr-WCm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="11" height="37.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gk6-Kv-6bU">
+                                                        <rect key="frame" x="39" y="8.5" width="11" height="20.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Jr-D8-Rle">
+                                                        <rect key="frame" x="78" y="8.5" width="11" height="20.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eYE-Lv-gRa">
+                                                        <rect key="frame" x="117" y="8.5" width="11" height="20.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PMO-up-x20">
+                                                        <rect key="frame" x="156" y="8.5" width="11" height="20.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NEc-4G-Ynh">
+                                                        <rect key="frame" x="195" y="8.5" width="11" height="20.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y0a-Nj-Jhh">
+                                                        <rect key="frame" x="234" y="8.5" width="11" height="20.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f9X-Rp-qkP">
+                                                        <rect key="frame" x="273" y="19" width="11" height="0.0"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RBW-vv-XaX" userLabel="FirstRowSV">
+                                                <rect key="frame" x="59" y="45.5" width="296" height="37.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyB-8S-33x">
+                                                        <rect key="frame" x="0.0" y="8.5" width="30" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vef-0C-sbu" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="38" y="2" width="30" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="nJt-AF-7N0"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1Fk-OO-xkW" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="WFi-Hv-Oov"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="t8O-uk-NEg" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="114" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="ZeL-9L-RBh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="haF-h8-OsA" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="XRr-dg-apf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0OL-Wl-2e8" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="190" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="jxq-Fc-pZo"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="H9b-M2-NW6" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="228" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="Tfl-LB-hC7"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oAm-sV-nWb">
+                                                        <rect key="frame" x="266" y="8.5" width="30" height="20.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ouO-mV-ajc" userLabel="SecondRowSV">
+                                                <rect key="frame" x="59" y="91" width="296" height="37.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGu-Ot-ksu">
+                                                        <rect key="frame" x="0.0" y="8.5" width="30" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YI-4f-qJs" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="38" y="2" width="30" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="2Ej-Lk-JrI"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pot-pt-ZEk" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="zQC-xm-WqP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="otk-yu-7sB" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="114" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="aMV-zQ-oSE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wQ9-WG-IEU" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="W9Q-lZ-uGm"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Je8-cD-4pn" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="190" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="Phr-8V-ctR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Vae-ZA-f5f" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="228" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="PCZ-wi-n2j"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jjk-Hp-Qsw">
+                                                        <rect key="frame" x="266" y="8.5" width="30" height="20.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XgK-WD-smx" userLabel="ThirdRowSV">
+                                                <rect key="frame" x="59" y="136.5" width="296" height="37.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grq-eu-swN">
+                                                        <rect key="frame" x="0.0" y="8.5" width="30" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSc-kW-Au2" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="38" y="2" width="30" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="QYq-pR-iWv"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SMW-2w-VBA" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="ZLq-79-rh6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ysk-xr-dsX" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="114" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="Rrm-Sp-bm1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yE4-8q-sti" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="17v-a7-Brq"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HGs-Gv-mkS" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="190" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="3n2-I7-XLU"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4FQ-yU-5Bz" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="228" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="lxt-vQ-BgB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7BQ-60-h7l">
+                                                        <rect key="frame" x="266" y="8.5" width="30" height="20.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tWA-fT-5Gt" userLabel="FourthRowSV">
+                                                <rect key="frame" x="59" y="182" width="296" height="37.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gM2-sj-v8w">
+                                                        <rect key="frame" x="0.0" y="8.5" width="30" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kn5-T3-ifM" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="38" y="2" width="30" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="b61-1G-dX5"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VRF-43-PuH" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="VPb-O6-pVB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wnH-KP-VQA" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="114" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="sjb-0g-XBl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="K2L-gM-981" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="z5Y-s1-QJV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="O6l-rD-iAh" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="190" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="gpY-Qz-8mv"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QNo-Uk-JBW" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="228" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="yAl-ku-gA8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MAO-vu-mCU">
+                                                        <rect key="frame" x="266" y="8.5" width="30" height="20.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OHt-HW-8kg" userLabel="FifthRowSV">
+                                                <rect key="frame" x="59" y="227.5" width="296" height="37.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBo-gS-rjo">
+                                                        <rect key="frame" x="0.0" y="8.5" width="30" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPZ-v4-ZTf" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="38" y="2" width="30" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="8B4-tG-HsG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NV3-og-Jjc" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="p73-MC-p4U"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="P6A-Yb-kDf" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="114" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="SPr-Gh-Htf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cp9-vr-lg9" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="IMK-GL-gD6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5oL-J1-heh" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="190" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="0nT-7Q-Pca"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1Cx-lo-Hca" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="228" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="Bx3-8h-c5b"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lwy-aA-HjV">
+                                                        <rect key="frame" x="266" y="8.5" width="30" height="20.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IQD-gx-B9y" userLabel="SixthRowSV">
+                                                <rect key="frame" x="59" y="273" width="296" height="37.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sue-XB-BWK">
+                                                        <rect key="frame" x="0.0" y="8.5" width="30" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSa-7p-c33" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="38" y="2" width="30" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="Y1l-Td-YGh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ytB-UG-zmr" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="Im6-3D-BWk"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="alS-bc-lw6" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="114" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="TTn-er-7yL"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hrh-wl-UpX" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="pCs-aW-bPp"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="69x-9v-Rsk" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="190" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="e9A-gl-dbm"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="K0n-BW-jrN" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="228" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="dQ9-uY-UmT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KA7-4M-GTf">
+                                                        <rect key="frame" x="266" y="8.5" width="30" height="20.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ic8-88-RiU" userLabel="SeventhRowSV">
+                                                <rect key="frame" x="59" y="318.5" width="296" height="37.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huw-2L-5Ks">
+                                                        <rect key="frame" x="0.0" y="8.5" width="30" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chb-vg-OpC" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="38" y="2" width="30" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="Btc-Dz-vPh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ia1-3a-heG" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="yaf-mN-Pok"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KTf-TC-pnX" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="114" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="ugt-Io-XZb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gFC-Ab-O3s" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="PAI-VI-wdg"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Qfz-oi-02z" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="190" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="iQg-Bk-5cs"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KnY-Dv-bUp" customClass="RoundCornerButton" customModule="Movie" customModuleProvider="target">
+                                                        <rect key="frame" x="228" y="2" width="30" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SeatsButtonCliked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="LNp-6O-KpT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Lw-0Q-w6U">
+                                                        <rect key="frame" x="266" y="8.5" width="30" height="20.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kHu-1t-YYC" firstAttribute="top" secondItem="Yjw-gr-TZD" secondAttribute="top" id="1gL-r6-5AY"/>
+                                    <constraint firstItem="kHu-1t-YYC" firstAttribute="leading" secondItem="Yjw-gr-TZD" secondAttribute="leading" id="6uD-Cf-W51"/>
+                                    <constraint firstAttribute="bottom" secondItem="kHu-1t-YYC" secondAttribute="bottom" constant="8" id="7RH-cv-sqo"/>
+                                    <constraint firstAttribute="trailing" secondItem="kHu-1t-YYC" secondAttribute="trailing" id="9k2-AD-zkG"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vi0-om-N3r">
+                                <rect key="frame" x="8" y="416" width="398" height="50"/>
+                                <color key="backgroundColor" red="0.51764705879999995" green="0.54901960780000003" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ao1-WP-3cU"/>
+                                </constraints>
+                                <state key="normal" title="CHECK OUT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="checkOutButtonClicked:" destination="HCi-C0-WYq" eventType="touchUpInside" id="cE6-R6-H2O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Vi0-om-N3r" firstAttribute="top" secondItem="Yjw-gr-TZD" secondAttribute="bottom" constant="8" id="1QU-be-ZRU"/>
+                            <constraint firstItem="Yjw-gr-TZD" firstAttribute="top" secondItem="JIC-P9-ruH" secondAttribute="top" id="7h3-RN-aJ8"/>
+                            <constraint firstItem="JIC-P9-ruH" firstAttribute="trailing" secondItem="Vi0-om-N3r" secondAttribute="trailing" constant="8" id="EJw-Tf-md2"/>
+                            <constraint firstItem="Yjw-gr-TZD" firstAttribute="leading" secondItem="JIC-P9-ruH" secondAttribute="leading" id="S8N-7f-q0l"/>
+                            <constraint firstItem="Yjw-gr-TZD" firstAttribute="trailing" secondItem="JIC-P9-ruH" secondAttribute="trailing" id="bke-tN-XRi"/>
+                            <constraint firstItem="Vi0-om-N3r" firstAttribute="leading" secondItem="JIC-P9-ruH" secondAttribute="leading" constant="8" id="l0B-p8-J0O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JIC-P9-ruH"/>
+                    </view>
+                    <connections>
+                        <outlet property="A1" destination="vef-0C-sbu" id="LrU-nv-2xC"/>
+                        <outlet property="A2" destination="1Fk-OO-xkW" id="Px7-Gx-rZc"/>
+                        <outlet property="A3" destination="t8O-uk-NEg" id="zPe-mx-v2R"/>
+                        <outlet property="A4" destination="haF-h8-OsA" id="NmR-Wd-Za9"/>
+                        <outlet property="A5" destination="0OL-Wl-2e8" id="xnZ-xf-WXV"/>
+                        <outlet property="A6" destination="H9b-M2-NW6" id="8CH-k4-Jqm"/>
+                        <outlet property="B1" destination="3YI-4f-qJs" id="dFA-dD-bgG"/>
+                        <outlet property="B2" destination="pot-pt-ZEk" id="J29-wW-kQ9"/>
+                        <outlet property="B3" destination="otk-yu-7sB" id="4pp-ev-jVC"/>
+                        <outlet property="B4" destination="wQ9-WG-IEU" id="OVi-Dh-kZe"/>
+                        <outlet property="B5" destination="Je8-cD-4pn" id="JzS-8u-lz8"/>
+                        <outlet property="B6" destination="Vae-ZA-f5f" id="P8v-wm-Vio"/>
+                        <outlet property="C1" destination="ZSc-kW-Au2" id="NdC-Tf-EkO"/>
+                        <outlet property="C2" destination="SMW-2w-VBA" id="mYq-ey-FfH"/>
+                        <outlet property="C3" destination="Ysk-xr-dsX" id="A28-dL-utK"/>
+                        <outlet property="C4" destination="yE4-8q-sti" id="c6J-5C-cAO"/>
+                        <outlet property="C5" destination="HGs-Gv-mkS" id="Sm2-Mc-qc5"/>
+                        <outlet property="C6" destination="4FQ-yU-5Bz" id="zAc-ak-bk4"/>
+                        <outlet property="D1" destination="kn5-T3-ifM" id="5q9-LL-vRg"/>
+                        <outlet property="D2" destination="VRF-43-PuH" id="vrL-xa-KnK"/>
+                        <outlet property="D3" destination="wnH-KP-VQA" id="QMD-6a-mJr"/>
+                        <outlet property="D4" destination="K2L-gM-981" id="8fS-Fz-Rb1"/>
+                        <outlet property="D5" destination="O6l-rD-iAh" id="D1G-ke-0Pn"/>
+                        <outlet property="D6" destination="QNo-Uk-JBW" id="LMC-IZ-1uy"/>
+                        <outlet property="E1" destination="vPZ-v4-ZTf" id="4Gf-HP-1Z9"/>
+                        <outlet property="E2" destination="NV3-og-Jjc" id="Ero-fV-Xxu"/>
+                        <outlet property="E3" destination="P6A-Yb-kDf" id="1C8-eT-YUx"/>
+                        <outlet property="E4" destination="cp9-vr-lg9" id="hkd-y6-u0n"/>
+                        <outlet property="E5" destination="5oL-J1-heh" id="Dhm-Gd-vVO"/>
+                        <outlet property="E6" destination="1Cx-lo-Hca" id="Yrn-Qi-zv8"/>
+                        <outlet property="F1" destination="JSa-7p-c33" id="ZBC-AS-cRx"/>
+                        <outlet property="F2" destination="ytB-UG-zmr" id="WUO-dQ-jgM"/>
+                        <outlet property="F3" destination="alS-bc-lw6" id="xyL-V5-8CL"/>
+                        <outlet property="F4" destination="hrh-wl-UpX" id="kJ1-lb-77L"/>
+                        <outlet property="F5" destination="69x-9v-Rsk" id="rTP-ny-gya"/>
+                        <outlet property="F6" destination="K0n-BW-jrN" id="E1i-jh-tWt"/>
+                        <outlet property="G1" destination="chb-vg-OpC" id="xCr-yG-Ndl"/>
+                        <outlet property="G2" destination="ia1-3a-heG" id="9pf-Dq-M5I"/>
+                        <outlet property="G3" destination="KTf-TC-pnX" id="TCE-VT-3qz"/>
+                        <outlet property="G4" destination="gFC-Ab-O3s" id="ngL-XC-JyR"/>
+                        <outlet property="G5" destination="Qfz-oi-02z" id="Loc-4I-MtJ"/>
+                        <outlet property="G6" destination="KnY-Dv-bUp" id="4iO-9u-mpL"/>
+                        <outlet property="checkOutButton" destination="Vi0-om-N3r" id="9y1-o7-fkt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YW7-ya-TqI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2953.6231884057975" y="1137.7232142857142"/>
+        </scene>
+        <!--Ticket Confirmation Pager View Controller-->
+        <scene sceneID="5gV-JK-3aF">
+            <objects>
+                <viewController storyboardIdentifier="TicketConfirmationPageVCID" id="gSj-DC-VXK" customClass="TicketConfirmationPagerViewController" customModule="Movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VVx-dp-Ryi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYw-n7-m3u">
+                                <rect key="frame" x="8" y="8" width="398" height="880"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jzY-IF-U7J">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="880"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D1D-Q4-5eH">
+                                                <rect key="frame" x="20" y="0.0" width="358" height="440"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhj-MG-XSD">
+                                                <rect key="frame" x="20" y="440" width="358" height="440"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Bhj-MG-XSD" firstAttribute="leading" secondItem="jzY-IF-U7J" secondAttribute="leading" constant="20" id="BO3-0a-WRs"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bhj-MG-XSD" secondAttribute="trailing" constant="20" id="b6t-HX-gRc"/>
+                                            <constraint firstAttribute="trailing" secondItem="D1D-Q4-5eH" secondAttribute="trailing" constant="20" id="ecB-KX-aEe"/>
+                                            <constraint firstItem="D1D-Q4-5eH" firstAttribute="leading" secondItem="jzY-IF-U7J" secondAttribute="leading" constant="20" id="hCc-w9-Kvo"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jzY-IF-U7J" firstAttribute="leading" secondItem="HYw-n7-m3u" secondAttribute="leading" id="JNL-7e-2k6"/>
+                                    <constraint firstAttribute="bottom" secondItem="jzY-IF-U7J" secondAttribute="bottom" id="P3H-6N-69Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="jzY-IF-U7J" secondAttribute="trailing" id="nCZ-ZJ-eC7"/>
+                                    <constraint firstItem="jzY-IF-U7J" firstAttribute="top" secondItem="HYw-n7-m3u" secondAttribute="top" id="t5n-tb-098"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="HYw-n7-m3u" firstAttribute="left" secondItem="VVx-dp-Ryi" secondAttribute="left" constant="8" id="AxV-W0-ez6"/>
+                            <constraint firstItem="HYw-n7-m3u" firstAttribute="top" secondItem="VVx-dp-Ryi" secondAttribute="top" constant="8" id="BBU-IO-eK2"/>
+                            <constraint firstAttribute="bottom" secondItem="HYw-n7-m3u" secondAttribute="bottom" constant="8" id="IHh-dz-kIz"/>
+                            <constraint firstAttribute="right" secondItem="HYw-n7-m3u" secondAttribute="right" constant="8" id="X0l-z5-wPK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jq2-Xs-JZA"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="HYw-n7-m3u" id="XaK-Kg-oyb"/>
+                        <outlet property="imageView" destination="D1D-Q4-5eH" id="eQa-TM-gJz"/>
+                        <outlet property="labelText" destination="Bhj-MG-XSD" id="LBT-dI-44m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="puy-52-LO6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1799" y="1711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Theatre_Screen_top_bar" width="316.5" height="8"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="background" width="650" height="1155"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
 </document>

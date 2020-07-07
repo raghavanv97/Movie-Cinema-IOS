@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieView" customModule="Movie" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomView" destination="BGL-Y1-6kC" id="AZd-rv-G7p"/>
+                <outlet property="containerView" destination="iN0-l3-epB" id="pry-kq-COY"/>
+                <outlet property="imageView" destination="ymb-lT-WQ6" id="O0i-AS-pay"/>
+                <outlet property="movie2Dor3DText" destination="X0R-8P-IVF" id="Ddc-xm-xhd"/>
+                <outlet property="movieCategory" destination="1UP-Nf-HRJ" id="loa-tH-OwF"/>
+                <outlet property="movieDescription" destination="sUF-Oy-YLu" id="0i1-aU-3Gk"/>
+                <outlet property="movieIMDBText" destination="DnR-dR-ror" id="FPX-46-HSc"/>
+                <outlet property="movieName" destination="yDN-xF-SM1" id="DJy-gt-0bC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cHj-eb-ODj" userLabel="MovieBackground">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1f8-lQ-MHA" userLabel="TopView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="409"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ymb-lT-WQ6">
+                            <rect key="frame" x="0.0" y="16" width="414" height="385"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ymb-lT-WQ6" firstAttribute="top" secondItem="1f8-lQ-MHA" secondAttribute="top" constant="16" id="5zY-22-a1H"/>
+                        <constraint firstItem="ymb-lT-WQ6" firstAttribute="leading" secondItem="1f8-lQ-MHA" secondAttribute="leading" id="L8k-jO-OKw"/>
+                        <constraint firstAttribute="trailing" secondItem="ymb-lT-WQ6" secondAttribute="trailing" id="Meg-GC-vuM"/>
+                        <constraint firstAttribute="bottom" secondItem="ymb-lT-WQ6" secondAttribute="bottom" constant="8" id="pWI-ed-YID"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGL-Y1-6kC" userLabel="BottomView">
+                    <rect key="frame" x="0.0" y="453" width="414" height="409"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="center" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="GnF-oQ-eg5" userLabel="MovieNameAndRating">
+                            <rect key="frame" x="16" y="15.999999999999996" width="382" height="43.666666666666657"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blade Runner 2049" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDN-xF-SM1">
+                                    <rect key="frame" x="0.0" y="0.0" width="191" height="43.666666666666664"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.25882352939999997" green="0.32156862749999998" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="igv-lY-0xA" userLabel="MovieDescription">
+                                    <rect key="frame" x="307" y="0.0" width="75" height="43.666666666666664"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0R-8P-IVF">
+                                            <rect key="frame" x="26.333333333333314" y="0.0" width="22.333333333333329" height="20.333333333333332"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMDB: 8.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnR-dR-ror">
+                                            <rect key="frame" x="0.0" y="23.333333333333314" width="75" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="igv-lY-0xA" secondAttribute="trailing" id="6uW-dY-uNp"/>
+                                <constraint firstAttribute="bottom" secondItem="igv-lY-0xA" secondAttribute="bottom" id="AVP-Gw-kAA"/>
+                                <constraint firstItem="yDN-xF-SM1" firstAttribute="top" secondItem="GnF-oQ-eg5" secondAttribute="top" id="ElP-w0-Qad"/>
+                                <constraint firstItem="igv-lY-0xA" firstAttribute="top" secondItem="GnF-oQ-eg5" secondAttribute="top" id="e0V-Hw-dOC"/>
+                                <constraint firstAttribute="bottom" secondItem="yDN-xF-SM1" secondAttribute="bottom" id="pAZ-aq-qOu"/>
+                                <constraint firstItem="yDN-xF-SM1" firstAttribute="leading" secondItem="GnF-oQ-eg5" secondAttribute="leading" id="snU-KE-6ds"/>
+                            </constraints>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mystery, Sci-Fi, Thriller" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UP-Nf-HRJ">
+                            <rect key="frame" x="16" y="75.666666666666629" width="382" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUF-Oy-YLu">
+                            <rect key="frame" x="16" y="112" width="382" height="81.333333333333314"/>
+                            <string key="text">A young blade runner's discovery of a long buried secret leads him to track down former blade runner Rick Deckard, who's been missed for thirty years.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="sUF-Oy-YLu" firstAttribute="top" secondItem="1UP-Nf-HRJ" secondAttribute="bottom" constant="16" id="4dk-pd-nMs"/>
+                        <constraint firstItem="1UP-Nf-HRJ" firstAttribute="leading" secondItem="BGL-Y1-6kC" secondAttribute="leading" constant="16" id="Efk-cA-a4C"/>
+                        <constraint firstItem="GnF-oQ-eg5" firstAttribute="leading" secondItem="BGL-Y1-6kC" secondAttribute="leading" constant="16" id="JPZ-ug-ut9"/>
+                        <constraint firstAttribute="bottom" secondItem="sUF-Oy-YLu" secondAttribute="bottom" priority="50" constant="32" id="NtO-Nr-gjj"/>
+                        <constraint firstItem="GnF-oQ-eg5" firstAttribute="top" secondItem="BGL-Y1-6kC" secondAttribute="top" constant="16" id="Xez-1N-uBk"/>
+                        <constraint firstAttribute="trailing" secondItem="1UP-Nf-HRJ" secondAttribute="trailing" constant="16" id="b8q-Dl-bSO"/>
+                        <constraint firstAttribute="trailing" secondItem="sUF-Oy-YLu" secondAttribute="trailing" constant="16" id="dV5-l1-0Ml"/>
+                        <constraint firstItem="sUF-Oy-YLu" firstAttribute="leading" secondItem="BGL-Y1-6kC" secondAttribute="leading" constant="16" id="fbu-1q-On8"/>
+                        <constraint firstItem="1UP-Nf-HRJ" firstAttribute="top" secondItem="GnF-oQ-eg5" secondAttribute="bottom" constant="16" id="fca-Pb-Gsm"/>
+                        <constraint firstItem="1UP-Nf-HRJ" firstAttribute="top" secondItem="GnF-oQ-eg5" secondAttribute="bottom" constant="16" id="tb4-Ps-KpP"/>
+                        <constraint firstItem="sUF-Oy-YLu" firstAttribute="top" secondItem="1UP-Nf-HRJ" secondAttribute="bottom" constant="16" id="wk0-kT-QdE"/>
+                        <constraint firstAttribute="trailing" secondItem="GnF-oQ-eg5" secondAttribute="trailing" constant="16" id="z7t-lD-vDn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1f8-lQ-MHA" secondAttribute="trailing" id="52v-8P-Exm"/>
+                <constraint firstItem="BGL-Y1-6kC" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="5hS-Gv-Eem"/>
+                <constraint firstItem="1f8-lQ-MHA" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="0.5" id="6l6-qL-hbc"/>
+                <constraint firstAttribute="trailing" secondItem="cHj-eb-ODj" secondAttribute="trailing" id="74O-rF-Fg2"/>
+                <constraint firstItem="1f8-lQ-MHA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="PoA-L0-IvC"/>
+                <constraint firstItem="BGL-Y1-6kC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Sd5-gf-OHr"/>
+                <constraint firstItem="cHj-eb-ODj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Twa-j1-zxV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BGL-Y1-6kC" secondAttribute="trailing" id="Ux3-yg-EoY"/>
+                <constraint firstItem="1f8-lQ-MHA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Wlv-BL-mpW"/>
+                <constraint firstAttribute="bottom" secondItem="cHj-eb-ODj" secondAttribute="bottom" id="WpZ-7t-oW5"/>
+                <constraint firstItem="cHj-eb-ODj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="o5S-zV-grE"/>
+                <constraint firstItem="BGL-Y1-6kC" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="0.5" id="yYT-g7-xgY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+        </view>
+    </objects>
+</document>

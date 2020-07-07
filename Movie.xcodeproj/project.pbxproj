@@ -3,19 +3,40 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200F2B9924A27FC3007E2E6A /* DetailedMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F2B9824A27FC3007E2E6A /* DetailedMovieViewController.swift */; };
+		200F2B9B24A28230007E2E6A /* MoviePosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F2B9A24A28230007E2E6A /* MoviePosterViewController.swift */; };
+		200F2B9D24A28258007E2E6A /* MovieDetailSubChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200F2B9C24A28258007E2E6A /* MovieDetailSubChildViewController.swift */; };
+		20579A4B249DE3DE00A0D4E7 /* SingleMovie.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20579A4A249DE3DE00A0D4E7 /* SingleMovie.xib */; };
+		2061AC5224A3C01B005C8628 /* MovieSessionTimingChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2061AC5124A3C01B005C8628 /* MovieSessionTimingChildViewController.swift */; };
+		206925E824B0F5F200B4A5F4 /* TicketConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206925E724B0F5F200B4A5F4 /* TicketConfirmationViewController.swift */; };
 		20867800249C8E8200209D79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208677FF249C8E8200209D79 /* AppDelegate.swift */; };
 		20867802249C8E8200209D79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20867801249C8E8200209D79 /* SceneDelegate.swift */; };
 		20867804249C8E8200209D79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20867803249C8E8200209D79 /* ViewController.swift */; };
 		20867807249C8E8200209D79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20867805249C8E8200209D79 /* Main.storyboard */; };
 		20867809249C8E8700209D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20867808249C8E8700209D79 /* Assets.xcassets */; };
 		2086780C249C8E8700209D79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2086780A249C8E8700209D79 /* LaunchScreen.storyboard */; };
+		20867822249D063D00209D79 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20867821249D063D00209D79 /* MovieView.swift */; };
+		20A6746024B2FE7300C02E3B /* TicketConfirmationPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A6745F24B2FE7300C02E3B /* TicketConfirmationPagerViewController.swift */; };
+		20A6746224B341ED00C02E3B /* BarCodeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A6746124B341ED00C02E3B /* BarCodeImageView.swift */; };
+		20AEFDFB24AA62F00002BBD6 /* RoundCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEFDFA24AA62F00002BBD6 /* RoundCornerButton.swift */; };
+		20CE9C5B24A8F3080052951C /* TicketBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CE9C5A24A8F3080052951C /* TicketBookingViewController.swift */; };
+		20FBF5BA24AEFF9000B80311 /* MoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FBF5B924AEFF9000B80311 /* MoviesModel.swift */; };
+		81A638FE7164DDA1E9ACE7AC /* Pods_Movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173307455D66E80D1F4D6D66 /* Pods_Movie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0259EC6C08EB7EED935290D4 /* Pods-Movie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie.release.xcconfig"; path = "Target Support Files/Pods-Movie/Pods-Movie.release.xcconfig"; sourceTree = "<group>"; };
+		173307455D66E80D1F4D6D66 /* Pods_Movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		200F2B9824A27FC3007E2E6A /* DetailedMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedMovieViewController.swift; sourceTree = "<group>"; };
+		200F2B9A24A28230007E2E6A /* MoviePosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePosterViewController.swift; sourceTree = "<group>"; };
+		200F2B9C24A28258007E2E6A /* MovieDetailSubChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailSubChildViewController.swift; sourceTree = "<group>"; };
+		20579A4A249DE3DE00A0D4E7 /* SingleMovie.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleMovie.xib; sourceTree = "<group>"; };
+		2061AC5124A3C01B005C8628 /* MovieSessionTimingChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSessionTimingChildViewController.swift; sourceTree = "<group>"; };
+		206925E724B0F5F200B4A5F4 /* TicketConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketConfirmationViewController.swift; sourceTree = "<group>"; };
 		208677FC249C8E8200209D79 /* Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208677FF249C8E8200209D79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20867801249C8E8200209D79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +45,13 @@
 		20867808249C8E8700209D79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2086780B249C8E8700209D79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2086780D249C8E8700209D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20867821249D063D00209D79 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
+		20A6745F24B2FE7300C02E3B /* TicketConfirmationPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketConfirmationPagerViewController.swift; sourceTree = "<group>"; };
+		20A6746124B341ED00C02E3B /* BarCodeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeImageView.swift; sourceTree = "<group>"; };
+		20AEFDFA24AA62F00002BBD6 /* RoundCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerButton.swift; sourceTree = "<group>"; };
+		20CE9C5A24A8F3080052951C /* TicketBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketBookingViewController.swift; sourceTree = "<group>"; };
+		20FBF5B924AEFF9000B80311 /* MoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModel.swift; sourceTree = "<group>"; };
+		9B811FC0E6AAF9736756CDC2 /* Pods-Movie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie.debug.xcconfig"; path = "Target Support Files/Pods-Movie/Pods-Movie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81A638FE7164DDA1E9ACE7AC /* Pods_Movie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +71,8 @@
 			children = (
 				208677FE249C8E8200209D79 /* Movie */,
 				208677FD249C8E8200209D79 /* Products */,
+				537E590A4AA80F3FCC693130 /* Pods */,
+				DAC718DCCA7D139160FF2344 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +89,66 @@
 			children = (
 				208677FF249C8E8200209D79 /* AppDelegate.swift */,
 				20867801249C8E8200209D79 /* SceneDelegate.swift */,
-				20867803249C8E8200209D79 /* ViewController.swift */,
+				20FBF5B624AEFF5D00B80311 /* Model */,
+				20D7DC9424A09901002F3DD7 /* Controller */,
 				20867805249C8E8200209D79 /* Main.storyboard */,
 				20867808249C8E8700209D79 /* Assets.xcassets */,
 				2086780A249C8E8700209D79 /* LaunchScreen.storyboard */,
 				2086780D249C8E8700209D79 /* Info.plist */,
+				20D7DC8E24A08773002F3DD7 /* SIngleMovieView */,
+				20AEFDFA24AA62F00002BBD6 /* RoundCornerButton.swift */,
+				20A6746124B341ED00C02E3B /* BarCodeImageView.swift */,
 			);
 			path = Movie;
+			sourceTree = "<group>";
+		};
+		20D7DC8E24A08773002F3DD7 /* SIngleMovieView */ = {
+			isa = PBXGroup;
+			children = (
+				20867821249D063D00209D79 /* MovieView.swift */,
+				20579A4A249DE3DE00A0D4E7 /* SingleMovie.xib */,
+			);
+			path = SIngleMovieView;
+			sourceTree = "<group>";
+		};
+		20D7DC9424A09901002F3DD7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				20867803249C8E8200209D79 /* ViewController.swift */,
+				200F2B9824A27FC3007E2E6A /* DetailedMovieViewController.swift */,
+				200F2B9A24A28230007E2E6A /* MoviePosterViewController.swift */,
+				200F2B9C24A28258007E2E6A /* MovieDetailSubChildViewController.swift */,
+				2061AC5124A3C01B005C8628 /* MovieSessionTimingChildViewController.swift */,
+				20CE9C5A24A8F3080052951C /* TicketBookingViewController.swift */,
+				206925E724B0F5F200B4A5F4 /* TicketConfirmationViewController.swift */,
+				20A6745F24B2FE7300C02E3B /* TicketConfirmationPagerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		20FBF5B624AEFF5D00B80311 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20FBF5B924AEFF9000B80311 /* MoviesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		537E590A4AA80F3FCC693130 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B811FC0E6AAF9736756CDC2 /* Pods-Movie.debug.xcconfig */,
+				0259EC6C08EB7EED935290D4 /* Pods-Movie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DAC718DCCA7D139160FF2344 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				173307455D66E80D1F4D6D66 /* Pods_Movie.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20867810249C8E8700209D79 /* Build configuration list for PBXNativeTarget "Movie" */;
 			buildPhases = (
+				74A7758221B7FB4994902E94 /* [CP] Check Pods Manifest.lock */,
 				208677F8249C8E8200209D79 /* Sources */,
 				208677F9249C8E8200209D79 /* Frameworks */,
 				208677FA249C8E8200209D79 /* Resources */,
+				EA383A3DC3BFCC4127DA1CDE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2086780C249C8E8700209D79 /* LaunchScreen.storyboard in Resources */,
+				20579A4B249DE3DE00A0D4E7 /* SingleMovie.xib in Resources */,
 				20867809249C8E8700209D79 /* Assets.xcassets in Resources */,
 				20867807249C8E8200209D79 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +220,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		74A7758221B7FB4994902E94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Movie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA383A3DC3BFCC4127DA1CDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Movie/Pods-Movie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Movie/Pods-Movie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Movie/Pods-Movie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		208677F8249C8E8200209D79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20FBF5BA24AEFF9000B80311 /* MoviesModel.swift in Sources */,
+				200F2B9B24A28230007E2E6A /* MoviePosterViewController.swift in Sources */,
+				20867822249D063D00209D79 /* MovieView.swift in Sources */,
+				200F2B9924A27FC3007E2E6A /* DetailedMovieViewController.swift in Sources */,
+				20CE9C5B24A8F3080052951C /* TicketBookingViewController.swift in Sources */,
 				20867804249C8E8200209D79 /* ViewController.swift in Sources */,
+				20AEFDFB24AA62F00002BBD6 /* RoundCornerButton.swift in Sources */,
 				20867800249C8E8200209D79 /* AppDelegate.swift in Sources */,
+				200F2B9D24A28258007E2E6A /* MovieDetailSubChildViewController.swift in Sources */,
+				20A6746224B341ED00C02E3B /* BarCodeImageView.swift in Sources */,
 				20867802249C8E8200209D79 /* SceneDelegate.swift in Sources */,
+				206925E824B0F5F200B4A5F4 /* TicketConfirmationViewController.swift in Sources */,
+				2061AC5224A3C01B005C8628 /* MovieSessionTimingChildViewController.swift in Sources */,
+				20A6746024B2FE7300C02E3B /* TicketConfirmationPagerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +422,11 @@
 		};
 		20867811249C8E8700209D79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B811FC0E6AAF9736756CDC2 /* Pods-Movie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5KT3RS654U;
 				INFOPLIST_FILE = Movie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,9 +441,11 @@
 		};
 		20867812249C8E8700209D79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0259EC6C08EB7EED935290D4 /* Pods-Movie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5KT3RS654U;
 				INFOPLIST_FILE = Movie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
