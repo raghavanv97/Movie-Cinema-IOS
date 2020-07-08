@@ -1,7 +1,15 @@
 # Movie-Cinema-IOS
-Cinema Ticket Booking IOS app concept
 
-## Video Walkthrough
+Movie Ticket Booking IOS Application with some cool Animation.
+
+## Implementations
+
+ - Create Custom Layout by using .xib file
+ - UIView.animation() to perform some basic animation
+ - Incorporate libraries to simplify the amount of code you need to write
+ - Image Mask - Masking an Image with an Image Mask.
+
+## Have a Look
 
 <img src='video/movie_demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
