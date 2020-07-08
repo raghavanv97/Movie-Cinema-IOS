@@ -6,7 +6,7 @@ Movie Ticket Booking IOS Application with some cool Animation.
 
  - Create Custom Layout by using .xib file
  - UIView.animation() to perform some basic animation
- - Incorporate libraries to simplify the amount of code you need to write
+ - Incorporate libraries by using Cocoapods which manages library dependencies for your Xcode projects
  - Image Mask - Masking an Image with an Image Mask.
 
 ## Have a Look
